@@ -21,7 +21,7 @@ $spacing-large: 60px;
 $spacing-xlarge: 80px;
 $spacing-xxlarge: 100px;
 
-$font-family-base: "Source Sans Pro", sans-serif;
+$font-family-base: "Source Sans 3", sans-serif;
 $font-size-base: clamp(16px, 1.5vw, 22px);
 
 $font-weight-normal: 400;
@@ -297,7 +297,7 @@ sup {
 		}
 
 		@media ($bp-xxlarge) {
-			font-size: 160px;
+			font-size: 168px;
 			letter-spacing: -9px;
 		}
 	}

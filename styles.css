@@ -8,7 +8,7 @@
 
 html {
   color: #000000;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   font-size: clamp(16px, 1.5vw, 22px);
   line-height: 1.4;
@@ -256,7 +256,7 @@ sup {
 }
 @media (min-width: 1440px) {
   .lp-hero__title {
-    font-size: 160px;
+    font-size: 168px;
     letter-spacing: -9px;
   }
 }
@@ -709,7 +709,7 @@ sup {
   cursor: pointer !important;
   display: inline-block !important;
   font-size: clamp(16px, 1.5vw, 22px) !important;
-  font-family: "Source Sans Pro", sans-serif !important;
+  font-family: "Source Sans 3", sans-serif !important;
   font-weight: 400 !important;
   line-height: 1;
   margin: 0;
@@ -756,7 +756,7 @@ sup {
   padding: 20px 24px;
   font-size: 20px;
   font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
 }
 .lp-form .mktoForm select.mktoField {
   appearance: none;
