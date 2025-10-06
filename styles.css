@@ -8,10 +8,10 @@
 
 html {
   color: #000000;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: clamp(16px, 1.5vw, 22px);
-  line-height: 1.3;
+  line-height: 1.4;
   height: 100%;
 }
 
@@ -20,7 +20,7 @@ body {
   color: #000000;
   font-size: clamp(16px, 1.5vw, 22px);
   height: 100%;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 h1,
@@ -233,7 +233,7 @@ sup {
   font-size: 60px;
   font-weight: 700;
   letter-spacing: -4.13px;
-  line-height: 0.75;
+  line-height: 0.8;
   margin-bottom: 0;
 }
 @media (min-width: 480px) {
@@ -246,7 +246,6 @@ sup {
   .lp-hero__title {
     font-size: 112px;
     letter-spacing: -6.13px;
-    line-height: 0.7;
   }
 }
 @media (min-width: 1024px) {
@@ -257,9 +256,8 @@ sup {
 }
 @media (min-width: 1440px) {
   .lp-hero__title {
-    font-size: 168px;
+    font-size: 160px;
     letter-spacing: -9px;
-    line-height: 0.71;
   }
 }
 
@@ -557,6 +555,7 @@ sup {
   .lp-callout-cards__items {
     flex-direction: row;
     gap: 60px;
+    align-items: stretch;
   }
 }
 .lp-callout-cards__item {
@@ -615,6 +614,7 @@ sup {
 }
 .lp-callout-cards__item-action {
   width: auto;
+  margin-top: auto;
 }
 
 .lp-form {
@@ -673,6 +673,9 @@ sup {
 .lp-form .mktoForm .mktoCheckboxList {
   white-space: normal;
   width: 100% !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 12px;
 }
 .lp-form .mktoForm .mktoCheckboxList label {
   white-space: normal !important;
@@ -685,6 +688,7 @@ sup {
 }
 .lp-form .mktoForm .mktoCheckboxList a {
   padding-top: 0;
+  padding-left: 5px;
 }
 .lp-form .mktoForm .mktoButtonRow {
   margin-top: 20px !important;
@@ -705,7 +709,7 @@ sup {
   cursor: pointer !important;
   display: inline-block !important;
   font-size: clamp(16px, 1.5vw, 22px) !important;
-  font-family: "Source Sans 3", sans-serif !important;
+  font-family: "Source Sans Pro", sans-serif !important;
   font-weight: 400 !important;
   line-height: 1;
   margin: 0;
@@ -752,18 +756,32 @@ sup {
   padding: 20px 24px;
   font-size: 20px;
   font-weight: 400;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 .lp-form .mktoForm select.mktoField {
   appearance: none;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E03-Icons/chevron-down%3C/title%3E%3Cg id='03-Icons/chevron-down' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M1.64644661,4.64644661 C1.84170876,4.45118446 2.15829124,4.45118446 2.35355339,4.64644661 L8,10.293 L13.6464466,4.64644661 C13.820013,4.47288026 14.0894374,4.45359511 14.2843055,4.58859116 L14.3535534,4.64644661 C14.5488155,4.84170876 14.5488155,5.15829124 14.3535534,5.35355339 L8.35355339,11.3535534 C8.15829124,11.5488155 7.84170876,11.5488155 7.64644661,11.3535534 L1.64644661,5.35355339 C1.45118446,5.15829124 1.45118446,4.84170876 1.64644661,4.64644661 Z' id='Path-3' fill='%23283346' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
 .lp-form .mktoForm .mktoError {
   left: 20px !important;
 }
+.lp-form .mktoForm label#LblsEEPrivacyAccepted {
+  width: 16px !important;
+  display: inline !important;
+  position: relative;
+  bottom: -20px;
+  padding-top: 0;
+}
+.lp-form .mktoForm .mktoOffset {
+  display: none;
+}
 
 .lp-footer {
   background: #E10A0A;
-  padding: 20px 0;
+  padding: 10px 0 16px;
 }
 @media (min-width: 768px) {
   .lp-footer__links nav {
@@ -772,23 +790,13 @@ sup {
 }
 .lp-footer__links nav a {
   color: #FFFFFF;
-  font-size: 12px;
+  font-size: 16px;
   display: inline-block;
-}
-@media (min-width: 480px) {
-  .lp-footer__links nav a {
-    font-size: 16px;
-  }
-}
-@media (min-width: 768px) {
-  .lp-footer__links nav a {
-    font-size: 20px;
-  }
 }
 .lp-footer__links nav a::after {
   display: inline-block;
   content: "·";
-  padding-inline: 1rem;
+  padding-inline: 8px;
 }
 .lp-footer__links nav a:last-of-type::after {
   content: "";

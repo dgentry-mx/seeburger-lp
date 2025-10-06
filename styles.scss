@@ -21,7 +21,7 @@ $spacing-large: 60px;
 $spacing-xlarge: 80px;
 $spacing-xxlarge: 100px;
 
-$font-family-base: "Source Sans 3", sans-serif;
+$font-family-base: "Source Sans Pro", sans-serif;
 $font-size-base: clamp(16px, 1.5vw, 22px);
 
 $font-weight-normal: 400;
@@ -56,7 +56,7 @@ html {
 	font-family:  $font-family-base;
 	font-weight: $font-weight-normal;
 	font-size: $font-size-base;
-	line-height: 1.3;
+	line-height: 1.4;
 	height: 100%;
 }
 
@@ -65,7 +65,7 @@ body {
 	color: $c-black;
 	font-size: $font-size-base;
 	height: 100%;
-	line-height: 1.3;
+	line-height: 1.4;
 }
 
 h1,
@@ -278,7 +278,7 @@ sup {
 		font-size: 60px;
 		font-weight: $font-weight-bold;
 		letter-spacing: -4.13px;
-		line-height: 0.75;
+		line-height: 0.8;
 		margin-bottom:0;
 
 		@media ($bp-small) {
@@ -289,7 +289,6 @@ sup {
 		@media ($bp-medium) {
 			font-size: 112px;
 			letter-spacing: -6.13px;
-			line-height: 0.7;
 		}
 
 		@media ($bp-large) {
@@ -298,9 +297,8 @@ sup {
 		}
 
 		@media ($bp-xxlarge) {
-			font-size: 168px;
+			font-size: 160px;
 			letter-spacing: -9px;
-			line-height: 0.71;
 		}
 	}
 }
@@ -607,6 +605,7 @@ sup {
 		@media ($bp-large) {
 			flex-direction: row;
 			gap: $spacing-large;
+			align-items: stretch;
 		}
 	}
 
@@ -665,6 +664,7 @@ sup {
 
 		&-action {
 			width: auto;
+			margin-top: auto;
 		}
 	}
 }
@@ -731,6 +731,9 @@ sup {
 		.mktoCheckboxList {
 			white-space: normal;
 			width: 100% !important;
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 12px;
 
 			label {
 				white-space: normal !important;
@@ -743,6 +746,7 @@ sup {
 
 			a {
 				padding-top: 0;
+				padding-left: 5px;
 			}
 		}
 
@@ -823,10 +827,26 @@ sup {
 
 		select.mktoField {
 			appearance: none;
+			background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E03-Icons/chevron-down%3C/title%3E%3Cg id='03-Icons/chevron-down' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M1.64644661,4.64644661 C1.84170876,4.45118446 2.15829124,4.45118446 2.35355339,4.64644661 L8,10.293 L13.6464466,4.64644661 C13.820013,4.47288026 14.0894374,4.45359511 14.2843055,4.58859116 L14.3535534,4.64644661 C14.5488155,4.84170876 14.5488155,5.15829124 14.3535534,5.35355339 L8.35355339,11.3535534 C8.15829124,11.5488155 7.84170876,11.5488155 7.64644661,11.3535534 L1.64644661,5.35355339 C1.45118446,5.15829124 1.45118446,4.84170876 1.64644661,4.64644661 Z' id='Path-3' fill='%23283346' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+			background-size: 20px 20px;
+			background-repeat: no-repeat;
+			background-position: right 20px center;
 		}
 
 		.mktoError {
 			left: 20px !important;
+		}
+
+		label#LblsEEPrivacyAccepted {
+			width: 16px !important;
+			display: inline !important;
+			position: relative;
+			bottom: -20px;
+			padding-top: 0;
+		}
+
+		.mktoOffset {
+			display: none;
 		}
 	}
 }
@@ -834,7 +854,7 @@ sup {
 
 .lp-footer {
 	background: $c-primary;
-	padding: $spacing-small 0;
+	padding: 10px 0 16px;
 
 	&__links {
 
@@ -846,22 +866,13 @@ sup {
 
 			a {
 				color: $c-white;
-				font-size: 12px;
+				font-size: 16px;
 				display: inline-block;
-
-				@media ($bp-small) {
-					font-size: 16px;
-				}
-
-				@media ($bp-medium) {
-					font-size: 20px;
-				}
 
 				&::after  {
 					display: inline-block;
 					content: "·";
-					padding-inline: 1rem;
-				
+					padding-inline: 8px;
 				}
 
 				&:last-of-type::after {
